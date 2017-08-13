@@ -1,0 +1,82 @@
+/*点击 二级菜单出现时箭头指向下*/
+.classify-box.active .classify-title .arrow-icon{
+  transform: rotate(90deg);
+}
+
+/*相关猫研所*/
+.relative-institute{
+  padding-top: 25px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #f7f7f7;
+  padding: 35px 20px 0;
+}
+.relative-institute .relative-institute-title{
+  text-align: center;
+  font-size: 18px;
+  color: #333333;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #dedede;
+}
+.relative-institute .institute-list{
+  padding: 25px 0 30px;
+  overflow: hidden;
+  margin-top: -14px;
+}
+.institute-list .item-text{
+  width: 50%;
+  padding-left: 19px;
+  float: left;
+  vertical-align: middle;
+  margin-top: 14px;
+}
+.institute-list .item-text::before{
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 7px;
+  height: 4px;
+  background-color: #000;
+}
+
+/*病理生理 等 疾病相关介绍的tab*/
+.content-box .item-tab-box{
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 14px;
+}
+.item-tab-box .link-line{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  border: 1px solid #65baae;
+  z-index: -1;
+}
+.item-tab-box .item-tab-list{
+  text-align: center;
+  line-height: 35px;
+  font-size: 14px;
+  color: #fff;
+  overflow: hidden;
+}
+.item-tab-list li{
+  width: 85px;
+  cursor: pointer;
+  float: left;
+  background-color: #999999;
+  margin-right: 15px;
+}
+.item-tab-list li.active{
+  background-color: #65baae;
+}
+.item-tab-list li:last-child{
+  margin-right: 0;
+}
+
+/*tab 相关联的文章内容list */
+.tab-relate-article li{
+  display: none;
+}
+.tab-relate-article li.active{
+  display: block;
+}

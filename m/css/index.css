@@ -1,0 +1,250 @@
+.container.banner{
+  height: 400px;
+  background-color: #f7f8f8;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: 5px;
+}
+.swiper-pagination-bullet-active{
+  background-color: #6dc3b7;
+}
+.swiper-slide{
+  position: relative;
+}
+.swiper-slide .banner-content{
+  width: 86.67%;
+  height: 180px;
+  margin-top: -50px;
+  background-color: #fff;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  /*z-index: 2;*/
+  left: 50%;
+  box-shadow: 0 0 10px #eaebeb;
+  -moz-box-shadow:0 0 10px #eaebeb;
+  -webkit-box-shadow:0 0 10px #eaebeb;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);	/* IE 9 */
+  -moz-transform: translateX(-50%);/* Firefox */
+  -webkit-transform: translateX(-50%); /* Safari 和 Chrome */
+  -o-transform: translateX(-50%);
+}
+.banner-content .num{
+  font-weight: bold;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);	/* IE 9 */
+  -moz-transform: translateX(-50%);/* Firefox */
+  -webkit-transform: translateX(-50%); /* Safari 和 Chrome */
+  -o-transform: translateX(-50%);
+  top: -15px;
+  font-size: 30px;
+  color: #6dc3b7;
+}
+.banner-content .profession{
+  color: #6dc3b7;
+  padding-top: 20px;
+}
+.banner-content .title{
+  font-size: 18px;
+  line-height: 18px;
+  color: #222222;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+.banner-content .desc{
+  max-width: 235px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  color: #666666;
+}
+.banner-content .banner-but{
+  width: 150px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #6dc3b7;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -75px;
+}
+.banner-content .banner-but::after{
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background: url('../img/more-icon-white.png') no-repeat center center;
+  background-size: cover;
+}
+.swiper-slide .banner-img{
+  width: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 225px;
+  background: url('/p/img/cat.png') no-repeat center center;
+  background-size: cover;
+}
+.disease{
+  padding: 23px 15px 0;
+  font-size: 12px;
+  line-height: 12px;
+  color: #333;
+  text-align: center;
+}
+.disease .disease-title{
+  font-size: 18px;
+  line-height: 18px;
+  color: #111;
+}
+.disease .desc{
+  margin: 20px 0 25px;
+  line-height: 18px;
+}
+.disease .more{
+  margin: 20px 0 25px;
+  color: #666666;
+  font-size: 12px;
+}
+.disease .more::after{
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  background: url('../img/more-icon.png') no-repeat center 0;
+  background-size: contain;
+  margin-left: 7px;
+}
+
+.disease-list .disease-item{
+  max-width: 310px;
+  margin: 25px auto 0;
+  box-shadow: 0px 0px 20px #f2f2f2;
+}
+.disease-item .disease-item-head{
+  height: 140px;
+  width: 100%;
+  background: url('../img/cat.png') no-repeat center 0;
+  background-size: cover;
+}
+.disease-item .item-title{
+  font-size: 16px;
+  color: #333;
+  margin: 18px 0 20px;
+}
+.disease-item .item-desc{
+  padding: 0 24px;
+  font-size: 12px;
+  color: #888;
+  line-height: 18px;
+}
+.disease-item .item-desc-more{
+  width: 180px;
+  height: 35px;
+  display: inline-block;
+  line-height: 35px;
+  border: 1px solid #e0e0e0;
+  font-size: 12px;
+  color: #333;
+  margin: 25px 0;
+}
+.disease-item .item-desc-more::after{
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background: url('../img/more-icon.png') no-repeat center 0;
+  background-size: contain;
+}
+.disease-item .disease-related-list{
+  border-top: 1px solid #e5e5e5;
+  padding: 10px 20px 25px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+}
+.disease-related-list li{
+  line-height: 14px;
+  margin-top: 15px;
+}
+.disease-related-list li::before{
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url(../img/text-icon.png) no-repeat center 0;
+  background-size: 100%;
+  margin-right: 5px;
+}
+
+/*猫眼所*/
+.institute{padding: 38px 0 0;}
+.institute .institute-title{
+  font-size: 18px;
+  color: #333333;
+  text-align: center;
+}
+.institute .institute-list{
+
+}
+.institute-list li{
+  max-width: 325px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 20px #f2f2f2;
+}
+.institute-list li::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.institute-list li.big-width .item-img{
+  width: 100%;
+  height: 150px;
+}
+.institute-list li .item-img{
+  width: 150px;
+  height: 145px;
+  background: url('../img/cat.png') no-repeat center 0;
+  background-size: cover;
+  float: left;
+}
+
+.institute-list li .des-box{
+  padding: 9px 15px 16px;
+  font-size: 12px;
+  color: #333;
+  min-height: 145px;
+  margin-left: 150px;
+  position: relative;
+}
+.institute-list li.big-width .des-box{
+  margin-left: 0;
+  float: left;
+  min-height:0;
+}
+.des-box .item-title{
+  font-size: 14px;
+}
+.des-box .item-desc{
+  line-height: 16px;
+  margin: 18px 0 13px;
+}
+.big-width .des-box .item-more-icon{
+  position: static;
+}
+.des-box .item-more-icon{
+  position: absolute;
+  right: 15px;
+  bottom: 16px;
+  width: 13px;
+  height: 8px;
+  background: url('../img/more-icon.png') no-repeat center center;
+  background-size: contain;
+}

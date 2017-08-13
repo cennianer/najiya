@@ -1,0 +1,217 @@
+/*侧栏与文章box部分*/
+.slide-content-box{
+  margin-top: 41px;
+}
+.slide-content-box:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.slide-content-box .slide-box{
+  width: 270px;
+  /*border: 1px solid red;*/
+}
+.slide-content-box .content-box{
+  width: 685px;
+  /*border: 1px solid red;*/
+}
+
+/*文章内容*/
+.content-box{
+}
+/*文章正文部分*/
+.content-box .article{
+  padding:0 20px 26px;
+  font-size: 14px;
+  color: #333333;
+}
+.article p{
+  line-height: 28px;
+}
+.article img{
+  width: 100%;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+/*文章内容的 title*/
+.content-box .article-title-box{
+  padding-bottom: 17px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 23px;
+  padding-left: 20px;
+}
+.article-title-box .article-title{
+  font-size: 22px;
+  line-height: 22px;
+  color: #111;
+  margin-top: 10px;
+  margin-bottom: 22px;
+}
+.article-title-box .article-time-and-source{
+  font-size:12px;
+  line-height: 12px;
+  color: #999;
+}
+.article-time-and-source .article-source{
+  margin-left: 28px;
+}
+
+
+/**/
+/*侧栏 专项研究*/
+.slide-box{ margin-top: -10px;}
+.slide-item-model{
+  margin-top: 28px;
+}
+.slide-item-model h2{
+  font-weight: normal;
+  font-size: 16px;
+  color: #111;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+.institute-list-box .institute-list{
+  /*padding-left: 15px;*/
+  font-size: 14px;
+  color: #fff;
+}
+.institute-list li{
+  text-align: center;
+  height: 27px;
+  line-height: 27px;
+  background-color: #b2b2b2;
+  padding: 0 14px;
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.institute-list li:hover, .institute-list li.active{
+  background-color: #65baae;
+}
+
+
+.relative-article-box ul{
+  padding:0 15px;
+  font-size: 12px;
+  color: #333;
+  /*margin-top: -14px;*/
+}
+.relative-article-box ul li{
+  /*width: 50%;*/
+  /*float: left;*/
+  vertical-align: middle;
+  margin-top: 14px;
+}
+.relative-article-box ul li::before{
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 7px;
+  height: 4px;
+  background-color: #000;
+}
+
+/*分享*/
+.content-box .share-box{
+  padding: 0 20px 30px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+.content-box .share-box::after{
+  display: block;
+  content: '';
+  clear: both;
+}
+.share-box .share-list{
+  float: right;
+}
+.share-box .share-list:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.share-list li{
+  width: 28px;
+  height: 28px;
+  float: left;
+  cursor: pointer;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -o-border-image: 100%;
+  margin-left: 16px;
+  position: relative;
+  background: url('../img/share-icon.png') no-repeat 0 0;
+  background-size: 94px 61px;
+}
+.share-list li.QZone{
+  background-position: 0 0;
+}
+.share-list li.wb{
+  background-position: -33px 0;
+}
+.share-list li.wx{
+  position: relative;
+  background-position: -66px 0;
+}
+.share-list li.QZone.active,
+.share-list li.QZone:hover{
+  background-position: 0 -33px;
+}
+.share-list li.wb.active,
+.share-list li.wb:hover{
+  background-position: -33px -33px;
+}
+.share-list li.wx.active,
+.share-list li.wx:hover{
+  background-position: -66px -33px;
+}
+.share-list li.wx:hover .two-code-box{
+  display: block;
+}
+
+.wx .two-code-box{
+  width: 260px;
+  height: 100px;
+  position: absolute;
+  top: 38px;
+  right: -15px;
+  border: 2px solid #dbdbdb;
+  background-color:#fff;
+  box-shadow: 0 0 2px #d1cfcf;
+}
+.wx .two-code-box .trigle-icon{
+  position: absolute;
+  top: -5px;
+  right: 25px;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border: 2px solid #dbdbdb;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+.wx .two-code-box .two-code{
+  width: 67px;
+  height: 67px;
+  margin-left: 14px;
+  margin-right: 14px;
+  border: none;
+  margin-top: 13px;
+  vertical-align: middle;
+}
+.wx .two-code-box .tell-user-use{
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 10px;
+  width: 140px;
+  font-size: 10px;
+  line-height: 19px;
+  color: #666;
+}

@@ -1,0 +1,51 @@
+/*header*/
+header{ position: relative;height: 90px;line-height: 80px;padding-top: 10px;box-shadow: 0px 1px 1px #e0e0e0, 0px 3px 3px #f0f0f0;}
+header .header-main{
+  width: 980px;margin: 0 auto;
+  height: 100%;
+}
+header .header-main:after{ content: '';display: block;clear: both;}
+.header-main .left{
+  float: left;
+}
+.header-main .right{
+  float: right;
+}
+
+.header-main .logo{
+  height: 100%;
+}
+.header-main .nav{
+  height: 100%;
+  overflow: hidden;
+}
+.nav li{
+  padding:0 30px;
+  float: left;
+}
+.nav li a::before{
+  content: '';
+  display: inline-block;
+  background-size: cover;
+  margin-bottom: -2px;
+  width: 25px;
+  height: 22px;
+  margin-right: 6px;
+}
+.nav li a:hover{
+  color: #65baae;
+}
+.nav li:last-child{
+  padding-right: 0;
+}
+/*list active icon*/
+.nav li.active a::before{
+  background: url(../img/index-icon.png) no-repeat center 0;
+  background-size: contain;
+}
+/*list active*/
+.nav li.active a{
+  color: #65baae;
+  padding-bottom: 2px;
+  border-bottom: 3px solid #65baae;
+}

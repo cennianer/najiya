@@ -1,0 +1,118 @@
+/*header*/
+header{ position: relative;height: 50px;line-height: 50px;box-shadow: 0px 1px 1px #e0e0e0, 0px 3px 3px #f0f0f0;}
+header .header-main{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #fff;
+}
+header .header-main:after{ content: '';display: block;clear: both;}
+.header-main .left{
+  float: left;
+}
+.header-main .right{
+  float: right;
+}
+
+.header-main .logo{
+  height: 100%;
+  margin-left: 10px;
+}
+.header-main .nav{
+  font-size: 14px;
+  color: #333;
+  height: 100%;
+  overflow: hidden;
+  margin-right: 40px;
+}
+.nav li{
+  /*padding:0 30px;*/
+  float: left;
+  margin-right: 30px;
+}
+.nav li:last-child{
+  margin-right: 0;
+}
+/*list active icon*/
+/*.nav li.active a::before{
+  background: url(../img/index-icon.png) no-repeat center 0;
+  background-size: contain;
+}*/
+/*list active*/
+.nav li.active a{
+  color: #65baae;
+  /*padding-bottom: 2px;
+  border-bottom: 3px solid #65baae;*/
+}
+.classify-but{
+  width: 25px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url('../img/other-nav-icon.png') no-repeat center center;
+  background-size: contain;
+}
+.classify-but.close-but{
+  background-image: url('../img/close-classify-icon.png');
+}
+
+.classify-list{
+  cursor: default;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  background-color: #65baae;
+  border-bottom: 1px solid #529c92;
+}
+.cover-classify-content{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.4);
+  z-index: 2;
+}
+.classify-list li.classify{
+  padding: 20px 15px 15px;
+  border-top: 1px solid #529c92;
+  border-bottom: 1px solid #8acfc5;
+}
+.classify-list li.classify:first-child{
+  border-top: none;
+}
+.classify .classify-title{
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  margin: 0;
+}
+.classify .classify-title::before{
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 16px;
+  margin-right: 6px;
+  background: url('../img/shen-icon.png') no-repeat center center;
+  background-size: contain;
+  vertical-align: middle;
+}
+.classify .classify-item{
+  margin: 3px -10px 0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 15px;
+}
+.classify .classify-item::after{
+  display: block;
+  content: '';
+  clear: both;
+}
+.classify-item li.one-class-item{
+  float: left;
+  line-height: 25px;
+  padding: 0 5px;
+  margin: 10px 8px 0 0;
+  background-color: #50ab9e;
+}

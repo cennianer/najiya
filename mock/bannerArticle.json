@@ -1,0 +1,85 @@
+{
+    "code": 1000,
+    "data": {
+        "articles": [
+            {
+                "title": "专题文章22222title",
+                "image": "http://maoyansuo.oss-cn-beijing.aliyuncs.com/image/2fe1bb43ffbcc0fe.png",
+                "describe": "专题文章22222desc22222desc22222desc22222desc22222desc",
+                "jumpUrl": "",
+                "articleList": [
+                    {
+                        "articleId": 2,
+                        "title": "专题文章标题111",
+                        "topicId": null,
+                        "searchKeywords": null,
+                        "source": null,
+                        "type": null,
+                        "classify": "disease",
+                        "status": null,
+                        "opId": null,
+                        "isDeleted": null,
+                        "created": null,
+                        "updated": null,
+                        "content": null
+                    },
+                    {
+                        "articleId": 1,
+                        "title": "测试文章",
+                        "topicId": null,
+                        "searchKeywords": null,
+                        "source": null,
+                        "type": null,
+                        "classify": "yanghu",
+                        "status": null,
+                        "opId": null,
+                        "isDeleted": null,
+                        "created": null,
+                        "updated": null,
+                        "content": null
+                    }
+                ]
+            },
+            {
+                "title": "首页专题文章title11111",
+                "image": "http://maoyansuo.oss-cn-beijing.aliyuncs.com/image/1b3d1372facff8d8.png",
+                "describe": "首页专题文章desc11111desc11111desc11111desc11111desc11111",
+                "jumpUrl": "",
+                "articleList": [
+                    {
+                        "articleId": 2,
+                        "title": "专题文章标题111",
+                        "topicId": null,
+                        "searchKeywords": null,
+                        "source": null,
+                        "type": null,
+                        "classify": null,
+                        "status": null,
+                        "opId": null,
+                        "isDeleted": null,
+                        "created": null,
+                        "updated": null,
+                        "content": null
+                    },
+                    {
+                        "articleId": 1,
+                        "title": "测试文章",
+                        "topicId": null,
+                        "searchKeywords": null,
+                        "source": null,
+                        "type": null,
+                        "classify": null,
+                        "status": null,
+                        "opId": null,
+                        "isDeleted": null,
+                        "created": null,
+                        "updated": null,
+                        "content": null
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "success",
+    "success": true
+}

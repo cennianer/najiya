@@ -1,0 +1,54 @@
+{
+    "code": 1000,
+    "data": {
+        "list": [
+            {
+                "root": {
+                    "categoryId": 3,
+                    "categoryName": "肾病"
+                },
+                "leaves": [ ]
+            },
+            {
+                "root": {
+                    "categoryId": 4,
+                    "categoryName": "胰腺炎"
+                },
+                "leaves": [
+                    {
+                    "categoryId": 5,
+                    "categoryName": "大肠炎"
+                    }
+                ]
+            },
+            {
+                "root": {
+                    "categoryId": 6,
+                    "categoryName": "自发性膀胱炎/FLUTD"
+                },
+                "leaves": [ ]
+            },
+            {
+                "root": {
+                    "categoryId": 7,
+                    "categoryName": "炎性肠病/三体炎"
+                },
+                "leaves": [ ]
+            },
+            {
+                "root": {
+                    "categoryId": 8,
+                    "categoryName": "糖尿病"
+                },
+                "leaves": [
+                    {
+                        "categoryId": 9,
+                        "categoryName": "疾病分类111下的子分类11"
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "success",
+    "success": true
+}

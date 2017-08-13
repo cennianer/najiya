@@ -1,0 +1,269 @@
+/*content banner*/
+.banner{
+  height: 560px;
+  background-color: #f7f8f8;
+}
+.banner.container{
+  width: 100%;
+}
+.swiper-pagination-bullet-active{
+  background-color: #6dc3b7;
+}
+.swiper-slide{
+  position: relative;
+}
+.swiper-slide .banner-content{
+  width: 33.33%;
+  height: 280px;
+  margin-top: 140px;
+  background-color: #fff;
+  vertical-align: middle;
+  position: absolute;
+  text-align: center;
+  box-shadow: 0 0 20px #eaebeb;
+  -moz-box-shadow:0 0 20px #eaebeb;
+  -webkit-box-shadow:0 0 20px #eaebeb;
+}
+.banner-content .num{
+  font-weight: bold;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);	/* IE 9 */
+  -moz-transform: translateX(-50%);/* Firefox */
+  -webkit-transform: translateX(-50%); /* Safari 和 Chrome */
+  -o-transform: translateX(-50%);
+  top: -15px;
+  font-size: 30px;
+  color: #6dc3b7;
+}
+.banner-content .profession{
+  color: #6dc3b7;
+  margin-top: 70px;
+}
+.banner-content .title{
+  font-size: 18px;
+  line-height: 18px;
+  color: #222222;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+.banner-content .desc{
+  max-width: 235px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  color: #666666;
+}
+.banner-content .banner-but{
+  width: 180px;
+  line-height: 50px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #6dc3b7;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -90px;
+}
+.banner-content .banner-but::after{
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background: url('../img/more-icon-white.png') no-repeat center center;
+  background-size: cover;
+}
+.swiper-slide .banner-img{
+  width: 71%;
+  height: 510px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 25px;
+  vertical-align: middle;
+}
+
+
+.disease{
+  padding-top: 35px;
+  text-align: center;
+}
+.disease .disease-title{
+  text-align: center;
+  font-size: 22px;
+  line-height: 22px;
+  color: #111111;
+}
+.disease .desc{
+  color: #333333;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 30px 0 25px 0;
+}
+.disease .more{
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.disease .more:after{
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  background: url(../img/more-icon.png) no-repeat center 0;
+  background-size: 100%;
+  margin-left: 8px;
+}
+.disease .disease-list{
+  margin-right: -25px;
+  /*border: 1px solid red;*/
+  /*margin-bottom: 58px;*/
+}
+.disease .disease-list:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.disease-list li.disease-item{
+  width: 310px;
+  float: left;
+  margin-right: 25px;
+  box-shadow: 0px 0px 20px #f2f2f2;
+}
+.disease-list li.disease-item .disease-item-head{
+  width: 100%;
+  height: 140px;
+  background: url('../img/cat.png') no-repeat center 0;
+  background-size: cover;
+}
+li.disease-item .item-title{
+  font-size: 16px;
+  line-height: 16px;
+  margin: 18px 0 20px 0;
+  color: #111111;
+}
+li.disease-item .item-desc{
+  padding-left: 23px;
+  padding-right: 23px;
+  font-size: 14px;
+  line-height: 20px;
+}
+li.disease-item .item-desc-more{
+  display: inline-block;
+  width: 180px;
+  height: 35px;
+  line-height: 33px;
+  font-size: 12px;
+  color: ＃333333;
+  border:1px solid #efefef;
+  margin-top: 22px;
+  margin-bottom: 25px;
+}
+li.disease-item .item-desc-more:after{
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  background: url(../img/more-icon.png) no-repeat center 0;
+  background-size: 100%;
+  margin-left: 8px;
+}
+li.disease-item .disease-related-list{
+  border-top: 1px solid #e5e5e5;
+  padding: 10px 20px 25px;
+  text-align: left;
+  font-size: 14px;
+}
+li.disease-item .disease-related-list li{
+  margin-top: 15px;
+}
+li.disease-item .disease-related-list li::before{
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url('../img/text-icon.png') no-repeat center 0;
+  background-size: 100%;
+  margin-right: 5px;
+}
+
+.institute{
+  padding-top: 60px;
+}
+.institute .institute-title{
+  text-align: center;
+  margin-bottom: 35px;
+  color: #333;
+  font-size: 22px;
+  line-height: 22px;
+}
+.institute .institute-list{
+  margin-right: -25px;
+  margin-top: -25px;
+}
+.institute .institute-list::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.institute .institute-list li{
+  width: 226px;
+  float: left;
+  position: relative;
+  margin-right: 25px;
+  margin-top: 25px;
+}
+.institute .institute-list li.big-width{
+  width: 478px;
+}
+.institute .institute-list li .item-img{
+  width: 100%;
+  height: 220px;
+  background: url('../img/cat.png') no-repeat center 0;
+  background-size: cover;
+}
+
+.institute .institute-list li .cover-box{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+}
+.institute .institute-list li:hover .cover-box{
+  opacity: .66;
+  background-color: #000;
+}
+.institute .institute-list li:hover .cover-box .item-desc{
+  display: block;
+}
+.cover-box .des-box{
+  padding: 30px 20px;
+  position: absolute;
+  bottom: 0;
+}
+.des-box .item-title{
+  font-size: 14px;
+  line-height: 14px;
+}
+.des-box .item-desc{
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 12px;
+  margin-bottom: 21px;
+}
+.des-box .item-more-icon{
+  width: 13px;
+  height: 8px;
+  margin-top: 15px;
+  background: url('../img/more-icon-white.png') no-repeat center 0;
+  background-size: contain;
+}

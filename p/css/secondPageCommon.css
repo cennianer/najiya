@@ -1,0 +1,163 @@
+/*banner位*/
+.banner{
+  width: 100%;
+  min-width: 1000px;
+  height: 300px;
+  background: url('../img/cat.png') no-repeat center 0;
+  background-size: cover;
+  position: relative;
+}
+.banner .cover-banner{
+  width: 100%;
+  min-width: 1000px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .4;
+  text-align: center;
+  color:#ffffff;
+}
+.cover-banner .page-title-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);  /*IE9*/
+  -webkit-tranform: translate(-50%,-50%);  /*Safari and Chrome*/
+  -o-transform:  translate(-50%,-50%); /*Opera*/
+  -moz-transform: translate(-50%,-50%);
+}
+.page-title-box .page-title{
+  font-size: 30px;
+  line-height: 30px;
+}
+.page-title-box .page-desc{
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-top: 13px;
+}
+
+
+/*侧栏与文章box部分*/
+.slide-content-box{
+  margin-top: 41px;
+}
+.slide-content-box:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.slide-content-box .slide-box{
+  width: 270px;
+  /*border: 1px solid red;*/
+}
+.slide-content-box .content-box{
+  width: 685px;
+  /*border: 1px solid red;*/
+}
+
+/*侧面*/
+.slide-box{
+  margin-top: -15px;
+}
+
+/*大分类*/
+.classify-box .classify-title{
+  padding: 20px 15px 18px 25px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+  cursor: default;
+}
+.classify-box .classify-title:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+.classify-title .classify-icon{
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 20px;
+  background-color: green;
+  vertical-align: middle;
+  background: #fff no-repeat center center;
+  background-size: contain;
+}
+.classify-title span{
+  vertical-align: middle;
+}
+.classify-title .arrow-icon{
+  float: right;
+  display: inline-block;
+  width: 5px;
+  height: 8px;
+  background-color: yellow;
+  margin-top: 8px;
+  background: url('../img/arrow-icon.png') no-repeat center 0;
+  background-size: contain;
+}
+
+
+/*侧栏分类里面的二级分类item list*/
+.classify-box .classify-item-list{
+  padding: 25px 20px;
+  background-color: #65baae;
+  font-size: 12px;
+  color: #fff;
+  line-height: 12px;
+  position: relative;
+}
+.classify-item-list .triggle-icon{
+  position: absolute;
+  top: -3px;
+  right: 14px;
+  width: 7px;
+  height: 7px;
+  background-color: #65baae;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);  /*IE9*/
+  -webkit-tranform:rotate(45deg);   /*Safari and Chrome*/
+  -o-transform: rotate(45deg);  /*Opera*/
+  -moz-transform:rotate(45deg);
+}
+.classify-item-list .one-class-item{
+  margin-top: -20px;
+}
+.classify-item-list .one-class-item::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.classify-item-list .one-class-item li{
+  width: 50%;
+  float: left;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/*文章内容*/
+.content-box{
+}
+.content-box .article{
+  padding:0 20px 26px;
+  font-size: 14px;
+  color: #333333;
+}
+.article .item-page-title{
+  text-align: center;
+  font-size: 18px;
+  color: #111111;
+  margin-bottom: 33px;
+}
+.article p{
+  line-height: 28px;
+}
+.article img{
+  max-width: 100%;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}

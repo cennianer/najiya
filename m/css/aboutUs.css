@@ -1,0 +1,59 @@
+/*关于我们 导航栏*/
+.aboutus-nav{
+  height: 35px;
+  line-height: 35px;
+  background-color: #65baae;
+  position: relative;
+  font-size: 0;
+  color: #333333;
+  text-align: center;
+}
+.aboutus-nav li{
+  display: inline-block;
+  font-size: 12px;
+  width: 25%;
+}
+.aboutus-nav li.active{
+  color: #fff;
+}
+
+.classify-box,.classify-box .classify-title{
+  cursor: pointer;
+}
+/*侧栏 list的icon图*/
+.classify-title .classify-icon.guanyu{
+  background-image: url('../img/guanyu-icon.png');
+}
+.classify-title .classify-icon.lianxi{
+  background-size: 80%;
+  background-image: url('../img/lianxi-icon.png');
+}
+.classify-title .classify-icon.jiaru{
+  background-size: 90%;
+  background-image: url('../img/jiaru-icon.png');
+}
+.classify-title .classify-icon.falv{
+  /*background-size: 80%;*/
+  background-image: url('../img/falv-icon.png');
+}
+.classify-title .arrow-icon{
+  background: url('../img/arrow2-icon.png') no-repeat center 0;
+  background-position: 0 0;
+  background-size: 100%;
+}
+.classify-box:hover .classify-title span,
+.classify-box.active .classify-title span{
+  color: #65baae;
+}
+.classify-box:hover .classify-title .arrow-icon,
+.classify-box.active .classify-title .arrow-icon
+{
+  background-position: 0 -9px;
+}
+
+.content-box li{
+  display: none;
+}
+.content-box li.active{
+  display: block;
+}

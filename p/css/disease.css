@@ -1,0 +1,23 @@
+
+/*侧栏 list的icon图*/
+.classify-title .classify-icon.shen{
+  background-image: url('../img/shen-icon.png');
+}
+.classify-title .classify-icon.yixianyan{
+  background-image: url('../img/yixianyan-icon.png');
+}
+.classify-title .classify-icon.pangguangyan{
+  background-image: url('../img/pangguangyan-icon.png');
+}
+.classify-title .classify-icon.changbing{
+  background-size: 90%;
+  background-image: url('../img/changbing-icon.png');
+}
+.classify-title .classify-icon.tangniaobing{
+  background-size: 70%;
+  background-image: url('../img/tangniaobing-icon.png');
+}
+.classify-title .classify-icon.other-class{
+  background-size: 70%;
+  background-image: url('../img/other-class-icon.png');
+}

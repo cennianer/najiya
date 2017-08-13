@@ -1,0 +1,28 @@
+{
+    "code": 1000,
+    "data": {
+        "categoryId": 9,
+        "categoryName": "疾病分类111下的子分类11",
+        "parentId": 8,
+        "status": 0,
+        "description": "疾病分类111下的子分类11描述描述描述描述描述描述描述",
+        "searchKeywords": "疾病分类111下的子分类11",
+        "type": 0,
+        "isTopic": 0,
+        "created": 1502599755059,
+        "updated": 1502599755059,
+        "blsl": "<p>病理生理病理生理病理生理病理生理病理生理病理生理111111</p><p><br/></p><p><span style='border: 1px solid rgb(0, 0, 0); color: rgb(255, 0, 0);'>病理生</span><strong>理病理生理病理生理病理生理111222222</strong></p><p><br/></p><p>病理生理333333</p><p><img src='http://maoyansuo.oss-cn-beijing.aliyuncs.com/image/6c6147e4b3b0f070.png'/></p><p>收到回复交电费几号放假是死的师傅</p><p>少的发惊世毒妃</p><pre class='brush:php;toolbar:false'>sdfs&nbsp;sf&nbsp;fdsfsdfs</pre><p><br/></p>",
+        "xggn": "相关概念",
+        "lcbx": "临床表现",
+        "zd": "诊断",
+        "zl": "治疗",
+        "yh": "预后",
+        "yf": "预防",
+        "hlyd": "护理要点",
+        "zypg": "",
+        "xwbx": "",
+        "gl": ""
+    },
+    "message": "success",
+    "success": true
+}

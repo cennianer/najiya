@@ -1,0 +1,15 @@
+{
+    "code": 1000,
+    "data": {
+        "singleTopic": [
+            {
+                "image": "http://maoyansuo.oss-cn-beijing.aliyuncs.com/image/ccccfcaa03aa4dd3.png",
+                "title": "首页单条专题2222title",
+                "describe": "首页单条专题2222desc2222desc2222desc2222desc2222desc",
+                "jumpUrl": "http://www.baidu.com?shouyedantiaozhuanti=2"
+            }
+        ]
+    },
+    "message": "success",
+    "success": true
+}

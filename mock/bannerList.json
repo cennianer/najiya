@@ -1,0 +1,21 @@
+{
+    "code": 1000,
+    "data": {
+        "banner": [
+            {
+                "image": "http://maoyansuo.oss-cn-beijing.aliyuncs.com/image/9454577b5111c5a0.png",
+                "title": "首页banner标题22222",
+                "describe": "首页banner描述描述描述描述描述描述描述描述22222",
+                "jumpUrl": "http://www.baidu.com?banner=2"
+            },
+            {
+                "image": "http://maoyansuo.oss-cn-beijing.aliyuncs.com/image/7b9b4f70c4f48f8d.png",
+                "title": "首页banner资源标题1111",
+                "describe": "首页banner资源描述描述描述描述描述描述描述1111",
+                "jumpUrl": "http://www.baidu.com"
+            }
+          ]
+    },
+    "message": "success",
+    "success": true
+}
