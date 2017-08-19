@@ -8,12 +8,12 @@ $(function() {
     }
 
     // 线下
-    var ajaxUrls = {
-        bannerList: '/mock/bannerList.json',//首页banner
-        bannerSingleTopic: '/mock/bannerSingleTopic.json', //一个专题
-        bannerArticle: '/mock/bannerArticle.json', // 3个文章
-        bannerTopics: '/mock/bannerTopics.json', //6个专题
-    }
+    // var ajaxUrls = {
+    //     bannerList: '/mock/bannerList.json',//首页banner
+    //     bannerSingleTopic: '/mock/bannerSingleTopic.json', //一个专题
+    //     bannerArticle: '/mock/bannerArticle.json', // 3个文章
+    //     bannerTopics: '/mock/bannerTopics.json', //6个专题
+    // }
 
 
     // banner位
@@ -26,8 +26,6 @@ $(function() {
                 if(+res.code == 1000) {
                     var data = res.data && res.data.banner;
                     var dataLen = data && data.length;
-
-                    console.log('banner list :', data);
 
                     for(var i = 0; i < dataLen; i++) {
                         var num = i < 9 ? ('0' + (i+1)) : (i+1);
@@ -101,7 +99,7 @@ $(function() {
                         if(relatedList && relatedListLen > 0) {
                             for(var j = 0; j < relatedListLen; j++) {
                                 // todo category(疾病、养护) 还是 article(专题)
-                                relatedHtml += '<a href="./' + relatedList[j].classify +'.html?articleId=' + relatedList[j].articleId + '"><li class="toe">' + relatedList[j].title + '</li></a>';
+                                relatedHtml += '<a href="./instituteDesc.html?articleId=' + relatedList[j].articleId + '"><li class="toe">' + relatedList[j].title + '</li></a>';
                             }
                         }
 

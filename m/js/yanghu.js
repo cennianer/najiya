@@ -4,16 +4,16 @@ $(function() {
 
     var ajaxUrls = {
         categoryList: '/category/list/yanghu',// 侧栏
-        detail: '/category/detail/', // 文章详情页 [注] ajaxUrls.detail + id
+        detail: '/category/detail/{id}', // 文章详情页 [注] ajaxUrls.detail + id
         InstiteteRelative: '/article/yanghu' //专题推荐
     }
 
     // 线下
-    var ajaxUrls = {
-        categoryList: '/mock/categoryListDisease.json',
-        detail: '/mock/categoryDetailId.json',
-        InstiteteRelative: '/mock/articleDisease.json'
-    }
+    // var ajaxUrls = {
+    //     categoryList: '/mock/categoryListDisease.json',
+    //     detail: '/mock/categoryDetailId.json',
+    //     InstiteteRelative: '/mock/articleDisease.json'
+    // }
 
     // 内容--默认: 没有id时 是二级页面默认内容， 有id时 是此id详情页面内容
     function defaultContent() {
@@ -99,16 +99,14 @@ $(function() {
         // var eleBox = $(".single-topic-box");
         var html = '';
         $.ajax({
-            // url: ajaxUrls.detail + articleId,
-            // 线下
-            url: ajaxUrls.detail,
+            url: ajaxUrls.detail.replace(/{id}/, articleId),
             success: function(res) {
                 // res = JSON.parseJSON(res)
                 if(+res.code == 1000) {
                     var data = res.data;
                     var title = data.categoryName ? '<h2 class="item-page-title">' + data.categoryName + '</h2>' : '';
                     var slideBLSL = '', slideLCBX = '', slideZD = '', slideZL = '', slideYH = '', slideYF = '', slideHLYD = '';
-                    var contentBLSL = '', contentLCBX = '', contentZD = '';
+                    var contentBLSL = '', contentLCBX = '', contentZD = '', contentZL = '', contentYH = '', contentYF = '', contentHLYD = '';
                     // 病理生理
                     if(data.blsl) {
                         slideBLSL = '<li class="active swiper-slide page-swiper-slide swiper-slide-active">病理生理</li>';
@@ -243,14 +241,7 @@ $(function() {
                     var relativeItemAll = '<ul class="institute-list">';
                     var href = './yanghu.html';
                     for(var i = 0, l = data.length; i < l; i++) {
-                        if(data[i].type == 0) {
-                            href = './disease.html';
-                        }else if(data[i].type == 1) {
-                            href = './yanghu.html';
-                        }else if(data[i].type == 2) {
-                            href = './instituteDesc.html';
-                        }
-                        relativeItemAll += '<a href="' + href + '?articleId=' + data[i].articleId + '"><li class="item-text toe">' + data[i].title + '</li></a>';
+                        relativeItemAll += '<a href="instituteDesc.html?articleId=' + data[i].articleId + '"><li class="item-text toe">' + data[i].title + '</li></a>';
                     }
                     relativeItemAll += '</ul>';
                     if(data.length > 0) {

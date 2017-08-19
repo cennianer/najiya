@@ -38,6 +38,9 @@ footer .footer-box{
 .footer-right-box .footer-list{
   overflow: hidden;
 }
+.footer-right-box .footer-list a{
+    color: #fff;
+}
 .footer-right-box .footer-list li{
   width: 119px;
   height: 14px;

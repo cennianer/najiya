@@ -3,20 +3,41 @@
 }
 /*侧栏 list的icon图*/
 .classify-title .classify-icon.guanyu{
-  background-image: url('../img/guanyu-icon.png');
+  background-image: url('../img/mao.png');
 }
 .classify-title .classify-icon.lianxi{
   background-size: 80%;
-  background-image: url('../img/lianxi-icon.png');
+  background-image: url('../img/lianxi.png');
 }
 .classify-title .classify-icon.jiaru{
   background-size: 90%;
-  background-image: url('../img/jiaru-icon.png');
+  background-image: url('../img/jia.png');
 }
 .classify-title .classify-icon.falv{
   /*background-size: 80%;*/
-  background-image: url('../img/falv-icon.png');
+  background-image: url('../img/fa.png');
 }
+
+.classify-box:hover .classify-title .classify-icon.guanyu,
+.active .classify-title .classify-icon.guanyu{
+  background-image: url('../img/mao_1.png');
+}
+.classify-box:hover .classify-title .classify-icon.lianxi,
+.active .classify-title .classify-icon.lianxi{
+  background-size: 80%;
+  background-image: url('../img/lianxi_1.png');
+}
+.classify-box:hover .classify-title .classify-icon.jiaru,
+.active .classify-title .classify-icon.jiaru{
+  background-size: 90%;
+  background-image: url('../img/jia_1.png');
+}
+.classify-box:hover .classify-title .classify-icon.falv,
+.active .classify-title .classify-icon.falv{
+  /*background-size: 80%;*/
+  background-image: url('../img/fa_1.png');
+}
+
 .classify-title .arrow-icon{
   background: url('../img/arrow2-icon.png') no-repeat center 0;
   background-position: 0 0;
@@ -31,6 +52,11 @@
 {
   background-position: 0 -9px;
 }
+/*.classify-box:hover .classify-title .arrow-icon,
+.classify-box.active .classify-title .arrow-icon
+{
+  background-position: 0 -9px;
+}*/
 
 .content-box li{
   display: none;

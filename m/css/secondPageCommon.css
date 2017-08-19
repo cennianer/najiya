@@ -6,6 +6,16 @@
   background-size: cover;
   position: relative;
 }
+.banner{
+  width: 100%;
+  height: 150px;
+  background: url('../img/disease.jpg') no-repeat center 0;
+  background-size: cover;
+  position: relative;
+}
+.banner.aboutUs{
+    background-image: url('../img/aboutUs_pc.jpg');
+}
 .banner .cover-banner{
   width: 100%;
   height: 100%;
@@ -155,6 +165,7 @@
 }
 .article p{
   line-height: 28px;
+  min-height: 28px;
 }
 .article img{
   width: 100%;

@@ -46,6 +46,18 @@
                         "categoryName": "疾病分类111下的子分类11"
                     }
                 ]
+            },
+            {
+                "root": {
+                    "categoryId": 8,
+                    "categoryName": "其他"
+                },
+                "leaves": [
+                    {
+                        "categoryId": 9,
+                        "categoryName": "疾病分类111下的子分类11"
+                    }
+                ]
             }
         ]
     },

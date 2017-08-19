@@ -8,11 +8,11 @@ $(function() {
         articleList: '/category/{id}/articleList' // 侧栏推荐
      }
     // 线下
-    var ajaxUrls = {
-        articleDetail: '/mock/articleDetail.json',
-        categoryTopics: '/mock/categoryListByType.json', // 侧栏专题列表
-        articleList: '/mock/articleDisease.json'
-    }
+    // var ajaxUrls = {
+    //     articleDetail: '/mock/articleDetail.json',
+    //     categoryTopics: '/mock/categoryListByType.json', // 侧栏专题列表
+    //     articleList: '/mock/articleDisease.json'
+    // }
 
     function add0(m){return m<10?'0'+m:m }
     function format(shijianchuo) {

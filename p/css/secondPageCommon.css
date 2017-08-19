@@ -3,9 +3,12 @@
   width: 100%;
   min-width: 1000px;
   height: 300px;
-  background: url('../img/cat.png') no-repeat center 0;
+  background: url('../img/disease.jpg') no-repeat center 0;
   background-size: cover;
   position: relative;
+}
+.banner.aboutUs{
+    background-image: url('../img/aboutUs.jpg');
 }
 .banner .cover-banner{
   width: 100%;
@@ -84,7 +87,7 @@
   margin-right: 20px;
   background-color: green;
   vertical-align: middle;
-  background: #fff no-repeat center center;
+  background: url('../img/shen-icon.png') no-repeat center center;
   background-size: contain;
 }
 .classify-title span{
@@ -155,6 +158,7 @@
 }
 .article p{
   line-height: 28px;
+  min-height: 28px;
 }
 .article img{
   max-width: 100%;

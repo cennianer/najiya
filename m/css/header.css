@@ -98,6 +98,31 @@ header .header-main:after{ content: '';display: block;clear: both;}
   background-size: contain;
   vertical-align: middle;
 }
+
+/*侧栏 list的icon图*/
+.classify .classify-title.shen::before{
+  background-image: url('../img/shen-icon.png');
+}
+.classify .classify-title.yixianyan::before{
+  background-image: url('../img/yixianyan-icon.png');
+}
+.classify .classify-title.pangguangyan::before{
+  background-image: url('../img/pangguangyan-icon.png');
+}
+.classify .classify-title.changbing::before{
+  /*background-size: 90%;*/
+  background-image: url('../img/changbing-icon.png');
+}
+.classify .classify-title.tangniaobing::before{
+  /*background-size: 70%;*/
+  background-image: url('../img/tangniaobing-icon.png');
+}
+.classify .classify-title.other-class::before{
+  /*background-size: 70%;*/
+  background-image: url('../img/other-class-icon.png');
+}
+
+
 .classify .classify-item{
   margin: 3px -10px 0 0;
   padding: 0;

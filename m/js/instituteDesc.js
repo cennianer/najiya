@@ -1,18 +1,18 @@
 $(function() {
-
+    FastClick.attach(document.body);
     var articleId = Utils.parseUrlParams().search['articleId'];
 
     var ajaxUrls = {
-        articleDetail: '/article/{id}/detail',// 详情
+        articleDetail: '/category/detail/{id}',// 详情
         categoryTopics: '/category/topics', // 侧栏专题列表
         articleList: '/category/{id}/articleList' // 侧栏推荐
      }
     // 线下
-    var ajaxUrls = {
-        articleDetail: '/mock/articleDetail.json',
-        categoryTopics: '/mock/categoryListByType.json', // 侧栏专题列表
-        articleList: '/mock/articleDisease.json'
-    }
+    // var ajaxUrls = {
+    //     articleDetail: '/mock/articleDetail.json',
+    //     categoryTopics: '/mock/categoryListByType.json', // 侧栏专题列表
+    //     articleList: '/mock/articleDisease.json'
+    // }
 
     function add0(m){return m<10?'0'+m:m }
     function format(shijianchuo) {

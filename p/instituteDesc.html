@@ -8,12 +8,12 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-capable" content="no">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="/p/css/reset.css">
+    <link rel="stylesheet" href="/p/css/header.css">
+    <link rel="stylesheet" href="/p/css/footer.css">
     <!-- <link rel="stylesheet" href="./css/secondPageInstituteAndTab.css"> -->
     <!-- <link rel="stylesheet" href="./css/secondPageCommon.css"> -->
-    <link rel="stylesheet" href="css/instituteDesc.css">
+    <link rel="stylesheet" href="/p/css/instituteDesc.css">
     <script type="text/javascript">
         var loc = location;
         var documentElement = window.document.documentElement;
@@ -28,13 +28,13 @@
     <!--  header-->
     <header>
       <div class="header-main">
-        <img src="img/logo.png" class="left logo"/>
+        <a href="/p/index.html"><img src="/p/img/logo.png" class="left logo"/></a>
         <ul class="right nav">
-            <li class="active"><a href="./index.html">首页</a></li>
-            <li><a href="./yanghu.html">猫咪养护</a></li>
-            <li><a href="disease.html">猫咪疾病</a></li>
-            <li><a href="aboutUs.html">关于猫研所</a></li>
-            <li><a href="aboutUs.html?tab=1">联系我们</a></li>
+            <li class="active"><a href="/p/index.html">首页</a></li>
+            <li><a href="/p/yanghu.html">猫咪养护</a></li>
+            <li><a href="/p/disease.html">猫咪疾病</a></li>
+            <li><a href="/p/aboutUs.html">关于猫研所</a></li>
+            <li><a href="/p/aboutUs.html?tab=1">联系我们</a></li>
         </ul>
       </div>
     </header>
@@ -54,7 +54,7 @@
                   <li class="wx">
                       <div class="two-code-box none">
                           <div class="trigle-icon"></div>
-                          <img src="/najiya/p/img/cat.png" alt="" class="two-code">
+                          <img src="/p/img/mysTwoCode.png" alt="" class="two-code">
                           <p class="tell-user-use">
                               打开微信，点击底部的“发现”， 使用“扫一扫”即可将网页分享 给微信好友。
                           </p>
@@ -79,10 +79,10 @@
         <div class="left logo-box"><img src="/p/img/logo-footer.png" alt=""></div>
         <div class="right footer-right-box">
           <ul class="footer-list">
-            <li>关于猫研所</li>
-            <li>联系我们</li>
-            <li>加入猫研所</li>
-            <li>法律声明</li>
+            <a href="/p/aboutUs.html?tab=0"><li>关于猫研所</li></a>
+            <a href="/p/aboutUs.html?tab=1"><li>联系我们</li></a>
+            <a href="/p/aboutUs.html?tab=2"><li>加入猫研所</li></a>
+            <a href="/p/aboutUs.html?tab=3"><li>法律声明</li></a>
           </ul>
           <div class="line"></div>
           <p>Copyright ©  2017 纳吉亚猫专科  </p>
@@ -95,20 +95,49 @@
     <script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script type="text/javascript" src="/p/js/utils.js"></script>
     <script type="text/javascript" src="/p/js/instituteDesc.js"></script>
-    <script id="weixinConfig">
+    <script id="weixinConfig" data-appid="wxb9fd56789902f33f">
+          var getTicketUrl = '/weixin/getTicket';
+        //   var getTicketUrl = '/mock/getTicket.json';
+
           var jsApiListOpt = ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone'];
-          try {
-              wx.config({
-                  // debug: true,
-                  appId: 'wxb9fd56789902f33f',
-                  timestamp: '{%$globalConf.env_wechat_sign.timestamp%}',
-                  nonceStr: '{%$globalConf.env_wechat_sign.noncestr%}',
-                  signature: '{%$globalConf.env_wechat_sign.signature%}',
-                  jsApiList: jsApiListOpt
-              });
-          } catch (e) {
-              console.log(e);
+          function makeid() {
+              var text = "";
+              var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+              for( var i=0; i < 10; i++ ) {
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+              }
+
+              return text;
           }
+          var timestamp = new Date().getTime();
+          var nonceStr = makeid();
+          var ticket = '';
+          var url = location.href.split('#')[0];
+          var signature = '';
+          $.ajax({
+              url: getTicketUrl,
+              success: function(res) {
+                  if(+res.code == 1000) {
+                    console.log('mock')
+                      ticket = res.data;
+                      signature = 'jsapi_ticket=' + ticket + '&noncestr=' + nonceStr + '&timestamp=' + timestamp + '&url=' + url
+                      try {
+                          wx.config({
+                              debug: false,
+                              appId: 'wxb9fd56789902f33f',
+                              timestamp: timestamp,
+                              nonceStr: nonceStr,
+                              signature: signature,
+                              jsApiList: jsApiListOpt
+                          });
+                      } catch (e) {
+                          // console.log(e);
+                      }
+                  }
+              }
+          })
+
       </script>
       <script type="text/javascript" src="/m/js/lib/m-weixin.js"></script>
       <script type="text/javascript">
@@ -117,10 +146,6 @@
               content: "猫研所--猫咪最爱",
               image: '//www.baidu.com/img/bd_logo1.png'
           };
-
-          if (shareOpt.titleName && shareOpt.titleName.search(/百家号$/) === -1) {
-              shareOpt.titleName += '-百家号';
-          }
           console.log('m-weixin after---')
           window.wxShare(shareOpt);
 

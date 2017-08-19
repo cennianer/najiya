@@ -1,4 +1,5 @@
 $(function() {
+    FastClick.attach(document.body);
     var slideBox = $(".aboutus-nav");
     var contentBox = $(".content-box li");
     var tab = Utils.parseUrlParams().search['tab'] || 0;
