@@ -45,8 +45,8 @@ footer .footer-box{
 .footer-list li a{
   color: #fff;
 }
-.footer-list li:nth-child(3),
-.footer-list li:nth-child(4){
+.footer-list a:nth-child(3) li,
+.footer-list a:nth-child(4) li{
   border-bottom:1px solid #56a79c;
 }
 

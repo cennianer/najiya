@@ -27,8 +27,8 @@
   vertical-align: middle;
   margin-top: 14px;
 }
-.institute-list .item-text:first-child{
-  margin-top: 0;
+.institute-list a:first-child .item-text{
+    margin-top: 0;
 }
 .institute-list .item-text::before{
   content: '';

@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript">
+        var loc = location;
+        var documentElement = window.document.documentElement;
+        var ClientWidth = documentElement.clientWidth;
+        var params = document.URL.split('?')[1] ? '?'+document.URL.split('?')[1] : '';
+        if(ClientWidth <= 750) {
+            loc.href = loc.protocol + '//' + loc.host + '/m/index.html' + params;
+        }
+    </script>
   </head>
   <body>
     <header>

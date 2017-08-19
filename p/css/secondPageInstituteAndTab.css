@@ -44,6 +44,7 @@
   position: relative;
   margin-bottom: 30px;
   margin-top: 14px;
+  display: inline-block;
 }
 .item-tab-box .link-line{
   position: absolute;
@@ -52,12 +53,17 @@
   border: 1px solid #65baae;
   z-index: -1;
 }
+.item-tab-box .item-tab-list::after{
+    content: "";
+    display: block;
+    clear: both;
+}
 .item-tab-box .item-tab-list{
   text-align: center;
   line-height: 35px;
   font-size: 14px;
   color: #fff;
-  overflow: hidden;
+  display: inline-block;
 }
 .item-tab-list li{
   width: 85px;

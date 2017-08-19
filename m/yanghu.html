@@ -15,6 +15,15 @@
     <link rel="stylesheet" href="./css/secondPageCommon.css">
     <link rel="stylesheet" href="./css/secondPageInstituteAndTab.css">
     <link rel="stylesheet" href="./css/disease.css">
+    <script type="text/javascript">
+        var loc = location;
+        var documentElement = window.document.documentElement;
+        var ClientWidth = documentElement.clientWidth;
+        var params = document.URL.split('?')[1] ? '?'+document.URL.split('?')[1] : '';
+        if(ClientWidth > 750) {
+            loc.href = loc.protocol + '//' + loc.host + '/p/yanghu.html' + params;
+        }
+    </script>
 </head>
 <body>
 <header>
@@ -27,8 +36,8 @@
         </ul>
     </div>
     <div class="cover-classify-content none"></div>
-    <ul class="classify-list none">
-        <li class="classify">
+    <ul class="slide-box classify-list none">
+        <!-- <li class="classify">
             <p class="classify-title">疾病相关行为学</p>
             <ul class="classify-item">
                 <li class="one-class-item">急性疼痛</li>
@@ -37,7 +46,7 @@
                 <li class="one-class-item">肥胖</li>
                 <li class="one-class-item">口面部疼痛综合症</li>
             </ul>
-        </li>
+        </li> -->
     </ul>
 </header>
 <!--  banner-->
@@ -50,61 +59,6 @@
 </section>
 <!--  container-->
 <section class="container slide-content-box">
-  <!--  侧栏-->
-  <ul class="slide-box left none">
-      <li class="classify classify-box active">
-          <div class="classify-title">
-              <i class="classify-icon shen"></i>
-              <span>肾病</span>
-              <i class="arrow-icon"></i>
-          </div>
-          <div class="classify-item-list">
-            <div class="triggle-icon"></div>
-            <ul class="one-class-item">
-              <li>急性肾衰</li>
-              <li>慢性肾衰</li>
-              <li>多囊肾</li>
-              <li>肾炎</li>
-              <li>淀粉样变</li>
-            </ul>
-          </div>
-      </li>
-      <li class="classify classify-box">
-          <div class="classify-title">
-              <i class="classify-icon yixianyan"></i>
-              <span>胰腺炎</span>
-              <i class="arrow-icon"></i>
-          </div>
-      </li>
-      <li class="classify classify-box">
-          <div class="classify-title">
-              <i class="classify-icon pangguangyan"></i>
-              <span>自发性膀胱炎/FLUTD</span>
-              <i class="arrow-icon"></i>
-          </div>
-      </li>
-      <li class="classify classify-box">
-          <div class="classify-title">
-              <i class="classify-icon changbing"></i>
-              <span>炎性肠病/三体炎</span>
-              <i class="arrow-icon"></i>
-          </div>
-      </li>
-      <li class="classify classify-box">
-          <div class="classify-title">
-              <i class="classify-icon tangniaobing"></i>
-              <span>糖尿病</span>
-              <i class="arrow-icon"></i>
-          </div>
-      </li>
-      <li class="classify classify-box">
-          <div class="classify-title">
-              <i class="classify-icon other-class"></i>
-              <span>其他</span>
-              <i class="arrow-icon"></i>
-          </div>
-      </li>
-  </ul>
   <!--  右边-->
   <div class="content-box">
       <!--  文章内容 -猫咪疾病落地第一页-->
@@ -134,12 +88,12 @@
           </div>
           <!--  相关猫研所-->
           <div class="relative-institute">
-              <h3 class="relative-institute-title">猫研所专题研究</h3>
+              <!-- <h3 class="relative-institute-title">猫研所专题研究</h3>
               <ul class="institute-list">
                   <li class="item-text toe">猫咪过于肥胖的时候，你该注意了猫咪过于肥胖的时候，你该注意了 </li>
                   <li class="item-text toe">猫咪过于肥胖的时候，你该注意了猫咪过于肥胖的时候，你该注意了 </li>
                   <li class="item-text toe">猫咪过于肥胖的时候，你该注意猫咪过于肥胖的时候，你该注意猫咪过于肥胖的时候，你该注意 </li>
-              </ul>
+              </ul> -->
           </div>
       </div>
 
@@ -244,10 +198,10 @@
 <footer>
     <div class="footer-box">
         <ul class="footer-list">
-            <li>关于猫研所</li>
-            <li>联系我们</li>
-            <li>加入猫研所</li>
-            <li>法律声明</li>
+            <a href="./aboutUs.html?tab=0"><li>关于猫研所</li></a>
+            <a href="./aboutUs.html?tab=1"><li>联系我们</li></a>
+            <a href="./aboutUs.html?tab=2"><li>加入猫研所</li></a>
+            <a href="./aboutUs.html?tab=3"><li>法律声明</li></a>
         </ul>
         <div class="logo-box"><img src="/m/img/logo-footer.png" alt=""></div>
         <p>Copyright ©  2017 纳吉亚猫专科  </p>
@@ -256,44 +210,9 @@
     </div>
 </footer>
 <script type="text/javascript" src="./js/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/lib/fastclick.js"></script>
 <script type="text/javascript" src="./js/lib/swiper.min.js"></script>
-<script type="text/javascript">
-var prizeSwiper = new Swiper('.page-swiper-container', {
-          //pagination: '.swiper-pagination',
-          slidesPerView: 3.5,
-          paginationClickable: true,
-          spaceBetween: 20,
-          freeMode: true
-      });
-
-      var  itemTabList = $(".item-tab-list");
-      itemTabList.on('click', 'li', function(item, i) {
-          console.log($(this).index())
-      })
-
-// 分类tab 按钮
-// 分类/cover
-    var $classifyBut = $(".classify-but");
-    var classifyCloseClass = 'close-but';
-    var $classifyCover = $(".cover-classify-content");
-    var $classifyList = $(".classify-list");
-    $classifyBut.on('click', function() {
-        $(this).toggleClass(classifyCloseClass)
-        $classifyCover.toggleClass('none');
-        $classifyList.slideToggle();
-    })
-    $classifyCover.on('click', function() {
-      $classifyCover.addClass('none');
-      $classifyBut.removeClass(classifyCloseClass);
-      $classifyList.slideUp();
-    })
-
-    $classifyList.on('click', '.classify .classify-item .one-class-item', function() {
-      console.log($(this)[0].innerText)
-      $classifyCover.addClass('none');
-      $classifyBut.removeClass(classifyCloseClass);
-      $classifyList.slideUp();
-    })
-</script>
+<script type="text/javascript" src="./js/Utils.js"></script>
+<script type="text/javascript" src="./js/yanghu.js"></script>
 </body>
 </html>

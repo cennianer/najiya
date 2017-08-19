@@ -70,7 +70,7 @@
   font-size: 16px;
   line-height: 22px;
   color: #333;
-  cursor: default;
+  cursor: pointer;
 }
 .classify-box .classify-title:after{
   display: block;

@@ -1,7 +1,4 @@
 /*侧栏与文章box部分*/
-.slide-content-box{
-  margin-top: 41px;
-}
 .slide-content-box:after{
   content: '';
   display: block;
@@ -65,6 +62,9 @@
   margin-top: 28px;
   padding: 0 20px;
 }
+.slide-item-model:first-child{
+    margin-top: 0;
+}
 .relative-article-box{
   margin-bottom: 25px;
 }
@@ -80,6 +80,9 @@
   /*padding-left: 15px;*/
   font-size: 14px;
   color: #fff;
+}
+.institute-list-box a{
+    color: #fff;
 }
 .institute-list li{
   text-align: center;

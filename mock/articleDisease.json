@@ -1,0 +1,39 @@
+{
+    "code": 1000,
+    "data": {
+        "articles": [
+            {
+                "articleId": 2,
+                "title": "专题文章标题111",
+                "topicId": null,
+                "searchKeywords": null,
+                "source": null,
+                "type": null,
+                "classify": null,
+                "status": null,
+                "opId": null,
+                "isDeleted": null,
+                "created": null,
+                "updated": null,
+                "content": null
+            },
+            {
+                "articleId": 1,
+                "title": "测试文章",
+                "topicId": null,
+                "searchKeywords": null,
+                "source": null,
+                "type": null,
+                "classify": null,
+                "status": null,
+                "opId": null,
+                "isDeleted": null,
+                "created": null,
+                "updated": null,
+                "content": null
+            }
+        ]
+    },
+    "message": "success",
+    "success": true
+}

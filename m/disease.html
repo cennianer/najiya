@@ -15,11 +15,20 @@
     <link rel="stylesheet" href="./css/secondPageCommon.css">
     <link rel="stylesheet" href="./css/secondPageInstituteAndTab.css">
     <link rel="stylesheet" href="./css/disease.css">
+    <script type="text/javascript">
+        var loc = location;
+        var documentElement = window.document.documentElement;
+        var ClientWidth = documentElement.clientWidth;
+        var params = document.URL.split('?')[1] ? '?'+document.URL.split('?')[1] : '';
+        if(ClientWidth > 750) {
+            loc.href = loc.protocol + '//' + loc.host + '/p/disease.html' + params;
+        }
+    </script>
 </head>
 <body>
 <header>
     <div class="header-main">
-        <img src="img/logo.png" class="left logo"/>
+        <a href="./index.html"><img src="img/logo.png" class="left logo"/></a>
         <ul class="right nav">
             <li class="active"><a href="./disease.html">猫咪疾病</a></li>
             <li><a href="./yanghu.html">猫咪养护</a></li>
@@ -27,8 +36,8 @@
         </ul>
     </div>
     <div class="cover-classify-content none"></div>
-    <ul class="classify-list none">
-        <li class="classify">
+    <ul class="slide-box classify-list none">
+        <!-- <li class="classify">
             <p class="classify-title">肾病</p>
             <ul class="classify-item">
                 <li class="one-class-item">急性肾衰</li>
@@ -65,7 +74,7 @@
                 <li class="one-class-item">糖尿病</li>
                 <li class="one-class-item">三体炎</li>
             </ul>
-        </li>
+        </li> -->
         <!-- <li class="classify">
             <p class="classify-title">其他</p>
             <ul class="classify-item">
@@ -91,61 +100,6 @@
 </section>
 <!--  container-->
 <section class="container slide-content-box">
-  <!--  侧栏-->
-  <ul class="slide-box left none">
-      <li class="classify classify-box active">
-          <div class="classify-title">
-              <i class="classify-icon shen"></i>
-              <span>肾病</span>
-              <i class="arrow-icon"></i>
-          </div>
-          <div class="classify-item-list">
-            <div class="triggle-icon"></div>
-            <ul class="one-class-item">
-              <li>急性肾衰</li>
-              <li>慢性肾衰</li>
-              <li>多囊肾</li>
-              <li>肾炎</li>
-              <li>淀粉样变</li>
-            </ul>
-          </div>
-      </li>
-      <li class="classify classify-box">
-          <div class="classify-title">
-              <i class="classify-icon yixianyan"></i>
-              <span>胰腺炎</span>
-              <i class="arrow-icon"></i>
-          </div>
-      </li>
-      <li class="classify classify-box">
-          <div class="classify-title">
-              <i class="classify-icon pangguangyan"></i>
-              <span>自发性膀胱炎/FLUTD</span>
-              <i class="arrow-icon"></i>
-          </div>
-      </li>
-      <li class="classify classify-box">
-          <div class="classify-title">
-              <i class="classify-icon changbing"></i>
-              <span>炎性肠病/三体炎</span>
-              <i class="arrow-icon"></i>
-          </div>
-      </li>
-      <li class="classify classify-box">
-          <div class="classify-title">
-              <i class="classify-icon tangniaobing"></i>
-              <span>糖尿病</span>
-              <i class="arrow-icon"></i>
-          </div>
-      </li>
-      <li class="classify classify-box">
-          <div class="classify-title">
-              <i class="classify-icon other-class"></i>
-              <span>其他</span>
-              <i class="arrow-icon"></i>
-          </div>
-      </li>
-  </ul>
   <!--  右边-->
   <div class="content-box">
       <!--  文章内容 -猫咪疾病落地第一页-->
@@ -175,29 +129,19 @@
           </div>
           <!--  相关猫研所-->
           <div class="relative-institute">
-              <h3 class="relative-institute-title">猫研所专题研究</h3>
-              <ul class="institute-list">
-                  <li class="item-text toe">猫咪过于肥胖的时候，你该注意了猫咪过于肥胖的时候，你该注意了 </li>
-                  <li class="item-text toe">猫咪过于肥胖的时候，你该注意了猫咪过于肥胖的时候，你该注意了 </li>
-                  <li class="item-text toe">猫咪过于肥胖的时候，你该注意猫咪过于肥胖的时候，你该注意猫咪过于肥胖的时候，你该注意 </li>
-              </ul>
+
           </div>
       </div>
 
       <!--  点击侧栏分类tab 下面内容展示-->
-      <div class="class-item-content ">
-          <div class="disease-desc article">
-              <h2 class="item-page-title">传染性腹膜炎</h2>
-              <p>如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
-          理，也并不是一个合格的主人.</p>
-              <p>关于猫咪的疾病防治我们应该如何做呢？</p>
-          </div>
-          <div class="item-tab-box rank-both-box swiper-container-wrap">
+      <div class="class-item-content none">
+
+          <!-- <div class="item-tab-box rank-both-box swiper-container-wrap">
               <div class="swiper-container page-swiper-container swiper-container-horizontal swiper-container-free-mode">
                   <div class="link-line"></div>
                   <ul class="item-tab-list prize-both-scroll swiper-wrapper page-swiper-wrapper">
                       <li class="active swiper-slide page-swiper-slide swiper-slide-active" >
-                          病理生理<!-- <div class="rank-first most-answer"></div> -->
+                          病理生理
                       </li>
                       <li class="swiper-slide page-swiper-slide swiper-slide-next">
                           临床表现
@@ -219,11 +163,10 @@
                       </li>
                   </ul>
               </div>
-          </div>
-          <ul class="tab-relate-article">
+          </div> -->
+          <!-- <ul class="tab-relate-article">
               <li class="active">
                 <div class="article">
-                    <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
                     <p>病理生理1111如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
                 理，也并不是一个合格的主人.</p>
                     <p>关于猫咪的疾病防治我们应该如何做呢？</p>
@@ -231,7 +174,6 @@
               </li>
               <li>
                 <div class="article">
-                    <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
                     <p>临床表现2222如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
                 理，也并不是一个合格的主人.</p>
                     <p>关于猫咪的疾病防治我们应该如何做呢？</p>
@@ -239,7 +181,6 @@
               </li>
               <li>
                 <div class="article">
-                    <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
                     <p>诊断333333如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
                 理，也并不是一个合格的主人.</p>
                     <p>关于猫咪的疾病防治我们应该如何做呢？</p>
@@ -247,7 +188,6 @@
               </li>
               <li>
                 <div class="article">
-                    <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
                     <p>治疗4444444如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
                 理，也并不是一个合格的主人.</p>
                     <p>关于猫咪的疾病防治我们应该如何做呢？</p>
@@ -255,7 +195,6 @@
               </li>
               <li>
                 <div class="article">
-                    <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
                     <p>预后55555如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
                 理，也并不是一个合格的主人.</p>
                     <p>关于猫咪的疾病防治我们应该如何做呢？</p>
@@ -263,7 +202,6 @@
               </li>
               <li>
                 <div class="article">
-                    <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
                     <p>预防66666如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
                 理，也并不是一个合格的主人.</p>
                     <p>关于猫咪的疾病防治我们应该如何做呢？</p>
@@ -271,24 +209,24 @@
               </li>
               <li>
                 <div class="article">
-                    <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
                     <p>护理要点77777如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
                 理，也并不是一个合格的主人.</p>
                     <p>关于猫咪的疾病防治我们应该如何做呢？</p>
                 </div>
               </li>
-          </ul>
+          </ul> -->
       </div>
   </div>
 </section>
 <!--  footer-->
+<!--  footer-->
 <footer>
     <div class="footer-box">
         <ul class="footer-list">
-            <li>关于猫研所</li>
-            <li>联系我们</li>
-            <li>加入猫研所</li>
-            <li>法律声明</li>
+            <a href="./aboutUs.html?tab=0"><li>关于猫研所</li></a>
+            <a href="./aboutUs.html?tab=1"><li>联系我们</li></a>
+            <a href="./aboutUs.html?tab=2"><li>加入猫研所</li></a>
+            <a href="./aboutUs.html?tab=3"><li>法律声明</li></a>
         </ul>
         <div class="logo-box"><img src="/m/img/logo-footer.png" alt=""></div>
         <p>Copyright ©  2017 纳吉亚猫专科  </p>
@@ -297,44 +235,9 @@
     </div>
 </footer>
 <script type="text/javascript" src="./js/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/lib/fastclick.js"></script>
 <script type="text/javascript" src="./js/lib/swiper.min.js"></script>
-<script type="text/javascript">
-var prizeSwiper = new Swiper('.page-swiper-container', {
-          //pagination: '.swiper-pagination',
-          slidesPerView: 3.5,
-          paginationClickable: true,
-          spaceBetween: 20,
-          freeMode: true
-      });
-
-      var  itemTabList = $(".item-tab-list");
-      itemTabList.on('click', 'li', function(item, i) {
-          console.log($(this).index())
-      })
-
-// 分类tab 按钮
-// 分类/cover
-    var $classifyBut = $(".classify-but");
-    var classifyCloseClass = 'close-but';
-    var $classifyCover = $(".cover-classify-content");
-    var $classifyList = $(".classify-list");
-    $classifyBut.on('click', function() {
-        $(this).toggleClass(classifyCloseClass)
-        $classifyCover.toggleClass('none');
-        $classifyList.slideToggle();
-    })
-    $classifyCover.on('click', function() {
-      $classifyCover.addClass('none');
-      $classifyBut.removeClass(classifyCloseClass);
-      $classifyList.slideUp();
-    })
-
-    $classifyList.on('click', '.classify .classify-item .one-class-item', function() {
-      console.log($(this)[0].innerText)
-      $classifyCover.addClass('none');
-      $classifyBut.removeClass(classifyCloseClass);
-      $classifyList.slideUp();
-    })
-</script>
+<script type="text/javascript" src="./js/utils.js"></script>
+<script type="text/javascript" src="./js/disease.js"></script>
 </body>
 </html>

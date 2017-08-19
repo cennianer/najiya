@@ -13,11 +13,20 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript">
+        var loc = location;
+        var documentElement = window.document.documentElement;
+        var ClientWidth = documentElement.clientWidth;
+        var params = document.URL.split('?')[1] ? '?'+document.URL.split('?')[1] : '';
+        if(ClientWidth > 750) {
+            loc.href = loc.protocol + '//' + loc.host + '/p/index.html' + params;
+        }
+    </script>
 </head>
 <body>
 <header>
     <div class="header-main">
-        <img src="img/logo.png" class="left logo"/>
+        <a href="./index.html"><img src="img/logo.png" class="left logo"/></a>
         <ul class="right nav">
             <li><a href="./disease.html">猫咪疾病</a></li>
             <li><a href="./yanghu.html">猫咪养护</a></li>
@@ -57,10 +66,10 @@
 <footer>
     <div class="footer-box">
         <ul class="footer-list">
-            <li>关于猫研所</li>
-            <li>联系我们</li>
-            <li>加入猫研所</li>
-            <li>法律声明</li>
+            <a href="./aboutUs.html?tab=0"><li>关于猫研所</li></a>
+            <a href="./aboutUs.html?tab=1"><li>联系我们</li></a>
+            <a href="./aboutUs.html?tab=2"><li>加入猫研所</li></a>
+            <a href="./aboutUs.html?tab=3"><li>法律声明</li></a>
         </ul>
         <div class="logo-box"><img src="/m/img/logo-footer.png" alt=""></div>
         <p>Copyright ©  2017 纳吉亚猫专科  </p>

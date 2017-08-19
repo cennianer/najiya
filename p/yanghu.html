@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="css/secondPageCommon.css">
     <link rel="stylesheet" href="css/secondPageInstituteAndTab.css">
     <link rel="stylesheet" href="css/conserve.css">
+    <script type="text/javascript">
+        var loc = location;
+        var documentElement = window.document.documentElement;
+        var ClientWidth = documentElement.clientWidth;
+        var params = document.URL.split('?')[1] ? '?'+document.URL.split('?')[1] : '';
+        if(ClientWidth <= 750) {
+            loc.href = loc.protocol + '//' + loc.host + '/m/yanghu.html' + params;
+        }
+    </script>
   </head>
   <body>
     <!--  header-->
@@ -43,7 +52,7 @@
     <section class="container slide-content-box">
       <!--  侧栏-->
       <ul class="slide-box left">
-          <li class="classify classify-box active">
+          <!-- <li class="classify classify-box active">
               <div class="classify-title">
                   <i class="classify-icon shen"></i>
                   <span>疾病相关行为学</span>
@@ -59,7 +68,7 @@
                   <li>口面部疼痛综合症</li>
                 </ul>
               </div>
-          </li>
+          </li> -->
 
       </ul>
       <!--  右边-->
@@ -91,100 +100,20 @@
               </div>
               <!--  相关猫研所-->
               <div class="relative-institute">
-                  <h3 class="relative-institute-title">猫研所专题研究</h3>
-                  <ul class="institute-list">
-                      <li class="item-text toe">猫咪过于肥胖的时候，你该注意了猫咪过于肥胖的时候，你该注意了 </li>
-                      <li class="item-text toe">猫咪过于肥胖的时候，你该注意了猫咪过于肥胖的时候，你该注意了 </li>
-                      <li class="item-text toe">猫咪过于肥胖的时候，你该注意猫咪过于肥胖的时候，你该注意猫咪过于肥胖的时候，你该注意 </li>
-                  </ul>
+
               </div>
           </div>
 
           <!--  点击侧栏分类tab 下面内容展示-->
-          <div class="class-item-content">
-              <div class="disease-desc article">
-                  <h2 class="item-page-title">传染性腹膜炎</h2>
-                  <p>如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
-              理，也并不是一个合格的主人.</p>
-                  <p>关于猫咪的疾病防治我们应该如何做呢？</p>
-              </div>
-              <div class="item-tab-box">
-                  <div class="link-line"></div>
-                  <ul class="item-tab-list">
-                      <li class="active">病理生理</li>
-                      <li>临床表现</li>
-                      <li>诊断</li>
-                      <li>治疗</li>
-                      <li>预后</li>
-                      <li>预防</li>
-                      <li>护理要点</li>
-                  </ul>
-              </div>
-              <ul class="tab-relate-article">
-                  <li class="active">
-                    <div class="article">
-                        <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
-                        <p>病理生理1111如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
-                    理，也并不是一个合格的主人.</p>
-                        <p>关于猫咪的疾病防治我们应该如何做呢？</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="article">
-                        <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
-                        <p>临床表现2222如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
-                    理，也并不是一个合格的主人.</p>
-                        <p>关于猫咪的疾病防治我们应该如何做呢？</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="article">
-                        <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
-                        <p>诊断333333如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
-                    理，也并不是一个合格的主人.</p>
-                        <p>关于猫咪的疾病防治我们应该如何做呢？</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="article">
-                        <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
-                        <p>治疗4444444如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
-                    理，也并不是一个合格的主人.</p>
-                        <p>关于猫咪的疾病防治我们应该如何做呢？</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="article">
-                        <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
-                        <p>预后55555如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
-                    理，也并不是一个合格的主人.</p>
-                        <p>关于猫咪的疾病防治我们应该如何做呢？</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="article">
-                        <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
-                        <p>预防66666如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
-                    理，也并不是一个合格的主人.</p>
-                        <p>关于猫咪的疾病防治我们应该如何做呢？</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="article">
-                        <!-- <h2 class="item-page-title">传染性腹膜炎</h2> -->
-                        <p>护理要点77777如何预防猫咪疾病是很多人都没有注意到的问题。我们平时跟着猫咪玩，可是却没有关心到它的心理和生
-                    理，也并不是一个合格的主人.</p>
-                        <p>关于猫咪的疾病防治我们应该如何做呢？</p>
-                    </div>
-                  </li>
-              </ul>
+          <div class="class-item-content none">
+
           </div>
       </div>
     </section>
     <!--  footer-->
     <footer>
       <div class="footer-box">
-        <div class="left logo-box"><img src="" alt=""></div>
+        <div class="left logo-box"><img src="/p/img/logo-footer.png" alt=""></div>
         <div class="right footer-right-box">
           <ul class="footer-list">
             <li>关于猫研所</li>
@@ -199,5 +128,8 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="/p/js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/p/js/utils.js"></script>
+    <script type="text/javascript" src="/p/js/yanghu.js"></script>
   </body>
 </html>

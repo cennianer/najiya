@@ -1,11 +1,11 @@
 $(function() {
-
+    FastClick.attach(document.body);
     var articleId = Utils.parseUrlParams().search['articleId'];
 
     var ajaxUrls = {
-        categoryList: '/category/list/disease',// 侧栏
+        categoryList: '/category/list/yanghu',// 侧栏
         detail: '/category/detail/', // 文章详情页 [注] ajaxUrls.detail + id
-        InstiteteRelative: '/article/disease' //专题推荐
+        InstiteteRelative: '/article/yanghu' //专题推荐
     }
 
     // 线下
@@ -35,12 +35,7 @@ $(function() {
         var eleBox = $(".slide-box");
         var html = '';
         var diseaseIcon = {
-                '肾病': 'shen',
-                '胰腺炎': 'yixianyan',
-                '自发性膀胱炎/FLUTD': 'pangguangyan',
-                '炎性肠病/三体炎':'changbing',
-                '糖尿病': 'tangniaobing',
-                '其他': 'other-class',
+                '疾病相关行为学': 'shen'
             };
         $.ajax({
             url: ajaxUrls.categoryList,
@@ -54,48 +49,45 @@ $(function() {
                             leavesListLen = leavesList && leavesList.length,
                             oneClassHtml = '';
                             for(var j = 0; j < leavesListLen; j++) {
-                                oneClassHtml += '<li data-categoryId="' + leavesList[j].categoryId + '">' + leavesList[j].categoryName + '</li>';
+                                oneClassHtml += '<li class="one-class-item" data-categoryId="' + leavesList[j].categoryId + '">' + leavesList[j].categoryName + '</li>';
                             }
                             if(oneClassHtml) {
                                 oneClassHtml =
-                                '<div class="classify-item-list none">'
-                                  + '<div class="triggle-icon"></div>'
-                                  + '<ul class="one-class-item">'
+                                '<ul class="classify-item">'
                                     + oneClassHtml
-                                  + '</ul>'
-                                + '</div>'
+                                + '</ul>';
                             }
                         html +=
-                        '<li class="classify classify-box">'
-                            + '<div class="classify-title" data-categoryId="' + data[i].root.categoryId + '">'
-                                + '<i class="classify-icon ' + diseaseIcon[data[i].root.categoryName] + '"></i>'
-                                + '<span>' + data[i].root.categoryName + '</span>'
-                                + '<i class="arrow-icon"></i>'
-                            + '</div>'
+                        '<li class="classify">'
+                            + '<p data-categoryId="' + data[i].root.categoryId + '" class="classify-title ' + diseaseIcon[data[i].root.categoryName] + '">' + data[i].root.categoryName + '</p>'
                             + oneClassHtml
                         + '</li>';
                     }
                     // 加到页面
                     eleBox.append(html);
-                    eleBox.on('click', 'li.classify .classify-title', function(e) {
-                        // 三级类别显示
-                        $(this).siblings(".classify-item-list").slideToggle();
-                        // 获取侧栏数据
-                        getCategoryContent($(this).data('categoryid'), function(html) {
-                            if(html){
-                                $(".default-content").addClass('none');
-                                $(".class-item-content").removeClass('none').html(html);
-                            }
-                        })
-                    });
-                    eleBox.on('click', '.classify-item-list .one-class-item li', function(e) {
-                        // 三级类别点击
-                        // $(this).siblings(".classify-item-list").slideToggle();
+
+                    var $classifyBut = $(".classify-but");
+                    var classifyCloseClass = 'close-but';
+                    var $classifyCover = $(".cover-classify-content");
+                    eleBox.on('click', '.classify .classify-item .one-class-item', function() {
+                        $classifyCover.addClass('none');
+                        $classifyBut.removeClass('close-but');
+                        eleBox.slideUp();
                         getCategoryContent($(this).data('categoryid'), function(html) {
                             $(".default-content").addClass('none');
                             $(".class-item-content").removeClass('none').html(html);
                         })
-                        console.log('xia ', $(this).data('categoryid'))
+                    });
+                    eleBox.on('click', '.classify-title', function(e) {
+                        // 三级类别点击
+                        $classifyCover.addClass('none');
+                        $classifyBut.removeClass('close-but');
+                        eleBox.slideUp();
+                        $(this).siblings(".classify-item-list").slideToggle();
+                        getCategoryContent($(this).data('categoryid'), function(html) {
+                            $(".default-content").addClass('none');
+                            $(".class-item-content").removeClass('none').html(html);
+                        })
                     });
                 }
             }
@@ -119,7 +111,7 @@ $(function() {
                     var contentBLSL = '', contentLCBX = '', contentZD = '';
                     // 病理生理
                     if(data.blsl) {
-                        slideBLSL = '<li class="active">病理生理</li>';
+                        slideBLSL = '<li class="active swiper-slide page-swiper-slide swiper-slide-active">病理生理</li>';
                         contentBLSL =
                             '<li class="active">'
                               + '<div class="article">'
@@ -129,7 +121,7 @@ $(function() {
                     }
                     // 临床表现
                     if(data.lcbx) {
-                        slideLCBX = '<li>临床表现</li>';
+                        slideLCBX = '<li class="swiper-slide page-swiper-slide swiper-slide-next">临床表现</li>';
                         contentLCBX =
                             '<li>'
                               + '<div class="article">'
@@ -139,7 +131,7 @@ $(function() {
                     }
                     // 诊断
                     if(data.zd) {
-                        slideZD = '<li>诊断</li>';
+                        slideZD = '<li class="swiper-slide page-swiper-slide swiper-slide-next">诊断</li>';
                         contentZD =
                             '<li>'
                              + '<div class="article">'
@@ -149,7 +141,7 @@ $(function() {
                     }
                     // 治疗
                     if(data.zl) {
-                        slideZL = '<li>治疗</li>';
+                        slideZL = '<li class="swiper-slide page-swiper-slide swiper-slide-next">治疗</li>';
                         contentZL =
                             '<li>'
                               + '<div class="article">'
@@ -159,7 +151,7 @@ $(function() {
                     }
                     // 预后
                     if(data.yh) {
-                        slideYH = '<li>预后</li>';
+                        slideYH = '<li class="swiper-slide page-swiper-slide swiper-slide-next">预后</li>';
                         contentYH =
                             '<li>'
                               + '<div class="article">'
@@ -169,7 +161,7 @@ $(function() {
                     }
                     // 预防
                     if(data.yf) {
-                        slideYF = '<li>预防</li>';
+                        slideYF = '<li class="swiper-slide page-swiper-slide swiper-slide-next">预防</li>';
                         contentYF =
                             '<li>'
                               + '<div class="article">'
@@ -179,7 +171,7 @@ $(function() {
                     }
                     // 护理要点
                     if(data.hlyd) {
-                        slideHLYD = '<li>护理要点</li>';
+                        slideHLYD = '<li class="swiper-slide page-swiper-slide swiper-slide-next">护理要点</li>';
                         contentHLYD =
                             '<li>'
                               + '<div class="article">'
@@ -194,17 +186,19 @@ $(function() {
                         + data.xggn
                         // + '<p>关于猫咪的疾病防治我们应该如何做呢？</p>'
                     + '</div>'
-                    + '<div class="item-tab-box">'
-                        + '<div class="link-line"></div>'
-                        + '<ul class="item-tab-list">'
-                            + slideBLSL
-                            + slideLCBX
-                            + slideZD
-                            + slideZL
-                            + slideYH
-                            + slideYF
-                            + slideHLYD
-                        + '</ul>'
+                    + '<div class="item-tab-box rank-both-box swiper-container-wrap">'
+                        + '<div class="swiper-container page-swiper-container swiper-container-horizontal swiper-container-free-mode">'
+                            + '<div class="link-line"></div>'
+                            + '<ul class="item-tab-list swiper-wrapper page-swiper-wrapper">'
+                                + slideBLSL
+                                + slideLCBX
+                                + slideZD
+                                + slideZL
+                                + slideYH
+                                + slideYF
+                                + slideHLYD
+                            + '</ul>'
+                        + '</div>'
                     + '</div>'
                     + '<ul class="tab-relate-article">'
                         + contentBLSL
@@ -217,7 +211,13 @@ $(function() {
                     + '</ul>';
                     // 加到页面
                     callback && callback(html);
-
+                    var prizeSwiper = new Swiper('.page-swiper-container', {
+                          //pagination: '.swiper-pagination',
+                          slidesPerView: 3.5,
+                          paginationClickable: true,
+                          spaceBetween: 20,
+                          freeMode: true
+                      });
                     // 绑定tab切换事件
                     var detailContentTab = $(".tab-relate-article li");
                     $(".item-tab-list").on('click', 'li', function() {
@@ -241,7 +241,7 @@ $(function() {
                     var data = res.data.articles || [];
                     var relativeInstitute = $(".relative-institute");
                     var relativeItemAll = '<ul class="institute-list">';
-                    var href = './disease.html';
+                    var href = './yanghu.html';
                     for(var i = 0, l = data.length; i < l; i++) {
                         if(data[i].type == 0) {
                             href = './disease.html';
@@ -261,7 +261,8 @@ $(function() {
                     }else {
                         relativeInstitute.addClass('none')
                     }
-
+                }else {
+                    alert(res.data.message)
                 }
             }
         })
@@ -271,6 +272,31 @@ $(function() {
         defaultContent();
         getDiseaseList();
         getInstiteteRelative();
+
+        var $classifyBut = $(".classify-but");
+        var classifyCloseClass = 'close-but';
+        var $classifyCover = $(".cover-classify-content");
+        var $classifyList = $(".classify-list");
+
+        $classifyBut.on('click', function() {
+            $(this).toggleClass(classifyCloseClass)
+            $classifyCover.toggleClass('none');
+            $classifyList.slideToggle();
+        })
+        $classifyCover.on('click', function() {
+          $classifyCover.addClass('none');
+          $classifyBut.removeClass(classifyCloseClass);
+          $classifyList.slideUp();
+        })
+
+        //   var  itemTabList = $(".item-tab-list");
+        //   itemTabList.on('click', 'li', function(item, i) {
+        //       console.log($(this).index())
+        //   })
+
+        // 分类tab 按钮
+        // 分类/cover
+
     }
 
 

@@ -1,0 +1,22 @@
+{
+    "code": 1000,
+    "data": {
+        "detail": {
+            "articleId": 1,
+            "title": "测试文章",
+            "topicId": 5,
+            "searchKeywords": "大肠,猫咪dachang",
+            "source": "猫研所",
+            "type": 0,
+            "classify": 0,
+            "status": 0,
+            "opId": 4,
+            "isDeleted": 0,
+            "created": 1502597360974,
+            "updated": 1502597360974,
+            "content": "<p>测试文章</p><p><br/></p><p>文章正文</p><p><br/></p><p><br/></p><p style='text-align: center;'><strong>文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文</strong></p>"
+        }
+    },
+    "message": "success",
+    "success": true
+}

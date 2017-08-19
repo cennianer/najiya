@@ -5,14 +5,14 @@ $(function() {
     var ajaxUrls = {
         categoryList: '/category/list/disease',// 侧栏
         detail: '/category/detail/', // 文章详情页 [注] ajaxUrls.detail + id
-        InstiteteRelative: '/article/disease' //专题推荐
+        InstiteteRelative: '/category/listByType/disease' //专题推荐
     }
 
     // 线下
     var ajaxUrls = {
         categoryList: '/mock/categoryListDisease.json',
         detail: '/mock/categoryDetailId.json',
-        InstiteteRelative: '/mock/articleDisease.json'
+        InstiteteRelative: '/mock/categoryListByType.json'
     }
 
     // 内容--默认: 没有id时 是二级页面默认内容， 有id时 是此id详情页面内容
@@ -238,19 +238,11 @@ $(function() {
             url: ajaxUrls.InstiteteRelative,
             success: function(res) {
                 if(+res.code == 1000) {
-                    var data = res.data.articles || [];
+                    var data = res.data.list || [];
                     var relativeInstitute = $(".relative-institute");
                     var relativeItemAll = '<ul class="institute-list">';
-                    var href = './disease.html';
                     for(var i = 0, l = data.length; i < l; i++) {
-                        if(data[i].type == 0) {
-                            href = './disease.html';
-                        }else if(data[i].type == 1) {
-                            href = './yanghu.html';
-                        }else if(data[i].type == 2) {
-                            href = './instituteDesc.html';
-                        }
-                        relativeItemAll += '<a href="' + href + '?articleId=' + data[i].articleId + '"><li class="item-text toe">' + data[i].title + '</li></a>';
+                        relativeItemAll += '<a><li class="item-text toe">' + data[i].categoryName + '</li></a>';
                     }
                     relativeItemAll += '</ul>';
                     if(data.length > 0) {

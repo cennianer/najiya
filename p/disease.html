@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="css/secondPageInstituteAndTab.css">
     <link rel="stylesheet" href="css/secondPageCommon.css">
     <link rel="stylesheet" href="css/disease.css">
+    <script type="text/javascript">
+        var loc = location;
+        var documentElement = window.document.documentElement;
+        var ClientWidth = documentElement.clientWidth;
+        var params = document.URL.split('?')[1] ? '?'+document.URL.split('?')[1] : '';
+        if(ClientWidth <= 750) {
+            loc.href = loc.protocol + '//' + loc.host + '/m/disease.html' + params;
+        }
+    </script>
   </head>
   <body>
     <!--  header-->
@@ -125,25 +134,20 @@
               </div>
               <!--  相关猫研所-->
               <div class="relative-institute">
-                  <h3 class="relative-institute-title">猫研所专题研究</h3>
-                  <ul class="institute-list">
-                      <li class="item-text toe">猫咪过于肥胖的时候，你该注意了猫咪过于肥胖的时候，你该注意了 </li>
-                      <li class="item-text toe">猫咪过于肥胖的时候，你该注意了猫咪过于肥胖的时候，你该注意了 </li>
-                      <li class="item-text toe">猫咪过于肥胖的时候，你该注意猫咪过于肥胖的时候，你该注意猫咪过于肥胖的时候，你该注意 </li>
-                  </ul>
+
               </div>
           </div>
 
           <!--  点击侧栏分类tab 下面内容展示-->
           <div class="class-item-content none">
-              
+
           </div>
       </div>
     </section>
     <!--  footer-->
     <footer>
       <div class="footer-box">
-        <div class="left logo-box"><img src="" alt=""></div>
+        <div class="left logo-box"><img src="/p/img/logo-footer.png" alt=""></div>
         <div class="right footer-right-box">
           <ul class="footer-list">
             <li>关于猫研所</li>
