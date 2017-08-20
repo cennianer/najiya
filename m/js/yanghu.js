@@ -239,7 +239,6 @@ $(function() {
                     var data = res.data.articles || [];
                     var relativeInstitute = $(".relative-institute");
                     var relativeItemAll = '<ul class="institute-list">';
-                    var href = './yanghu.html';
                     for(var i = 0, l = data.length; i < l; i++) {
                         relativeItemAll += '<a href="instituteDesc.html?articleId=' + data[i].articleId + '"><li class="item-text toe">' + data[i].title + '</li></a>';
                     }

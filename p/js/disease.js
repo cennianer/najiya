@@ -114,7 +114,7 @@ $(function() {
                     var data = res.data;
                     var title = data.categoryName ? '<h2 class="item-page-title">' + data.categoryName + '</h2>' : '';
                     var slideBLSL = '', slideLCBX = '', slideZD = '', slideZL = '', slideYH = '', slideYF = '', slideHLYD = '';
-                    var contentBLSL = '', contentLCBX = '', contentZD = '';
+                    var contentBLSL = '', contentLCBX = '', contentZD = '', contentZL='', contentYH='', contentYF='', contentHLYD='';
                     // 病理生理
                     if(data.blsl) {
                         slideBLSL = '<li class="active">病理生理</li>';

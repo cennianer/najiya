@@ -3,7 +3,7 @@ $(function() {
     var articleId = Utils.parseUrlParams().search['articleId'];
 
     var ajaxUrls = {
-        articleDetail: '/category/detail/{id}',// 详情
+        articleDetail: '/article/{id}/detail',// 详情
         categoryTopics: '/category/topics', // 侧栏专题列表
         articleList: '/category/{id}/articleList' // 侧栏推荐
      }
@@ -102,16 +102,8 @@ $(function() {
                     var data = res.data.articles || [];
                     var xiangguanListBox = $(".relative-article-box");
                     var xiangguanItemAll = '';
-                    var href = './disease.html';
                     for(var i = 0, l = data.length; i < l; i++) {
-                        if(data[i].type == 0) {
-                            href = './disease.html';
-                        }else if(data[i].type == 1) {
-                            href = './yanghu.html';
-                        }else if(data[i].type == 2) {
-                            href = './instituteDesc.html';
-                        }
-                        xiangguanItemAll += '<a href="' + href + '?articleId=' + data[i].articleId + '"><li class="toe">' + data[i].title + '</li></a>'
+                        xiangguanItemAll += '<a href="instituteDesc.html?articleId=' + data[i].articleId + '"><li class="toe">' + data[i].title + '</li></a>'
                     }
 
                     if(data.length > 0) {

@@ -5,7 +5,7 @@ $(function() {
     var ajaxUrls = {
         categoryList: '/category/list/yanghu',// 侧栏
         detail: '/category/detail/{id}' , // 文章详情页 [注] ajaxUrls.detail + id
-        InstiteteRelative: '/article/disease' //专题推荐
+        InstiteteRelative: '/article/yanghu' //专题推荐
     }
 
     // 线下
@@ -109,7 +109,7 @@ $(function() {
                     var data = res.data;
                     var title = data.categoryName ? '<h2 class="item-page-title">' + data.categoryName + '</h2>' : '';
                     var slideBLSL = '', slideLCBX = '', slideZD = '', slideZL = '', slideYH = '', slideYF = '', slideHLYD = '';
-                    var contentBLSL = '', contentLCBX = '', contentZD = '';
+                    var contentBLSL = '', contentLCBX = '', contentZD = '', contentZL='', contentYH='', contentYF='', contentHLYD='';
                     // 病理生理
                     if(data.blsl) {
                         slideBLSL = '<li class="active">病理生理</li>';
@@ -231,7 +231,7 @@ $(function() {
             url: ajaxUrls.InstiteteRelative,
             success: function(res) {
                 if(+res.code == 1000) {
-                    var data = res.data.list || [];
+                    var data = res.data.articles || [];
                     var relativeInstitute = $(".relative-institute");
                     var relativeItemAll = '<ul class="institute-list">';
                     for(var i = 0, l = data.length; i < l; i++) {
