@@ -52,6 +52,7 @@ $(function() {
                             + timeORsource
                         + '</div>'
                         + '<div class="article">' + data.content + '</div>';
+                    Utils.setDocumentTitle( data.title + '_专题研究_猫研所');
                     contentBox.html(contentHtml);
 
                 }
