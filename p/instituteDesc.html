@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:wb="http://open.weibo.com/wb">
   <head>
     <meta charset="utf-8">
     <title>专题研究_猫研所</title>
@@ -24,6 +24,7 @@
             loc.href = loc.protocol + '//' + loc.host + '/m/instituteDesc.html' + params;
         }
     </script>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
     <!--  header-->
@@ -51,7 +52,15 @@
           <div class="share-box">
               <ul class="share-list">
                   <li class="QZone"></li>
-                  <li class="wb"></li>
+                  <li class="wb">
+                      <wb:share-button
+                      id="wb-share-but"
+                      appkey="2379765050" addition="simple" type="icon"
+                      ralateUid="6317879233"
+                      default_text="我在一个专业的猫病知识平台发现了这篇文章，大家一起来学习"
+                      pic="http%3A%2F%2F47.95.47.124%2Fm%2Fimg%2Flogo.png" picture_search="false"
+                      style="opacity: 0;width: 100%;height: 100%;display: block;"></wb:share-button>
+                  </li>
                   <li class="wx">
                       <div class="two-code-box none">
                           <div class="trigle-icon"></div>
@@ -145,7 +154,7 @@
           var shareOpt = {
               titleName: '我在猫研所发现了非常专业的文章--' + document.title.split("_")[0],
               content: "猫研所-专题研究, 大家一起来学习!",
-              image: '/p/img/logo.png'
+              image: 'http://www.maoyansuo.com/m/img/logo.png'
           };
           console.log('m-weixin after---')
           window.wxShare(shareOpt);
