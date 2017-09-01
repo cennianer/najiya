@@ -22,6 +22,7 @@ $(function() {
             $(".default-content").removeClass('none');
             return;
         }
+        Utils.setDocumentTitle( '猫研所_猫咪_' + decodeURIComponent(Utils.parseUrlParams().search['name']) || '专业' + '_研究');
 
         var detailContent = $(".class-item-content");
         getCategoryContent(articleId, function(html) {
@@ -89,13 +90,15 @@ $(function() {
                         })
                     });
                     eleBox.on('click', '.classify-item-list .one-class-item li', function(e) {
+                        if($(this).data('categoryid') || $(this).data('categoryid') == 0) {
+                            location.href= 'diseaseDetail.html?articleId=' + $(this).data('categoryid') + '&name=' + $(this).text();
+                        }
                         // 三级类别点击
                         // $(this).siblings(".classify-item-list").slideToggle();
-                        getCategoryContent($(this).data('categoryid'), function(html) {
-                            $(".default-content").addClass('none');
-                            $(".class-item-content").removeClass('none').html(html);
-                        })
-                        console.log('xia ', $(this).data('categoryid'))
+                        // getCategoryContent($(this).data('categoryid'), function(html) {
+                        //     $(".default-content").addClass('none');
+                        //     $(".class-item-content").removeClass('none').html(html);
+                        // })
                     });
                 }
             }

@@ -23,6 +23,7 @@ $(function() {
             return;
         }
 
+        Utils.setDocumentTitle( '猫研所_猫咪_' + decodeURIComponent(Utils.parseUrlParams().search['name']) || '专业' + '_研究');
         var detailContent = $(".class-item-content");
         getCategoryContent(articleId, function(html) {
             // 文章详情内容容器
@@ -75,13 +76,16 @@ $(function() {
                     var classifyCloseClass = 'close-but';
                     var $classifyCover = $(".cover-classify-content");
                     eleBox.on('click', '.classify .classify-item .one-class-item', function() {
-                        $classifyCover.addClass('none');
-                        $classifyBut.removeClass('close-but');
-                        eleBox.slideUp();
-                        getCategoryContent($(this).data('categoryid'), function(html) {
-                            $(".default-content").addClass('none');
-                            $(".class-item-content").removeClass('none').html(html);
-                        })
+                        if($(this).data('categoryid') || $(this).data('categoryid') == 0) {
+                            location.href= 'diseaseDetail.html?articleId=' + $(this).data('categoryid') + '&name=' + $(this).text();
+                        }
+                        // $classifyCover.addClass('none');
+                        // $classifyBut.removeClass('close-but');
+                        // eleBox.slideUp();
+                        // getCategoryContent($(this).data('categoryid'), function(html) {
+                        //     $(".default-content").addClass('none');
+                        //     $(".class-item-content").removeClass('none').html(html);
+                        // })
                     });
                     eleBox.on('click', '.classify-title', function(e) {
                         // 三级类别点击

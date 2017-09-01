@@ -64,3 +64,6 @@
 .content-box li.active{
   display: block;
 }
+.banner.container{
+  background-image: url('../img/aboutUs.jpg')
+}

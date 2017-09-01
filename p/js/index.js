@@ -139,14 +139,13 @@ $(function() {
                         html +=
                         '<li ' + bigClass + '>'
                             + '<a href="' + data[i].jumpUrl + '">'
-                                + '<div class="item-img" style="' + data[i].image + '"></div>'
-                                + '<div class="cover-box">'
+                                + '<div class="item-img" style="background-image:url(' + data[i].image + ')"></div>'
+                                + '<div class="cover-box"></div>'
                                 + '<div class="des-box">'
-                                  + '<h3 class="item-title">' + data[i].title + '</h3>'
-                                  + '<p class="item-desc none">' + data[i].describe + '</p>'
-                                  + '<div class="item-more-icon"></div>'
+                                    + '<h3 class="item-title">' + data[i].title + '</h3>'
+                                    + '<p class="item-desc">' + data[i].describe + '</p>'
+                                    + '<div class="item-more-icon"></div>'
                                 + '</div>'
-                              + '</div>'
                           + '</a>'
                         + '</li>';
                     }

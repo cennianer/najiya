@@ -19,10 +19,12 @@
   left: 0;
   background-color: #000;
   opacity: .4;
-  text-align: center;
-  color:#ffffff;
 }
-.cover-banner .page-title-box{
+.cover-banner-content{
+    color:#ffffff;
+    text-align: center;
+}
+.cover-banner-content .page-title-box{
   position: absolute;
   top: 50%;
   left: 50%;

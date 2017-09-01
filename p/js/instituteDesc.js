@@ -2,6 +2,7 @@ $(function() {
 
     var articleId = Utils.parseUrlParams().search['articleId'];
 
+    $("#wb-share-but").attr("text", "我在一个专业的猫病知识平台")
     var ajaxUrls = {
         articleDetail: '/article/{id}/detail',// 详情
         categoryTopics: '/category/topics', // 侧栏专题列表
